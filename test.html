@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>PIXI.Input2 Test</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.7.1/pixi.min.js"></script>
+<script src="pixi.input2.js"></script>
+<script>
+window.addEventListener("load", function(){
+	var app = new PIXI.Application({
+		width: 800,
+		height: 500,
+		backgroundColor: 0x1099bb,
+		resolution: window.devicePixelRatio
+	});
+	app.view.style.width = app.screen.width + "px";
+	app.view.style.height = app.screen.height + "px";
+	document.body.appendChild(app.view);
+	
+	var input = new PIXI.Input({
+		type: "text",
+		value: "日本語入力可能",
+		placeholder: "Input Me",
+		placeholderColor: "#ccc",
+		readonly: false,
+		maxlength: null,
+		onfocus: function(){console.log("onfocus");},
+		onblur: function(){console.log("onblur");},
+		oninput: function(){console.log("oninput");},
+		width: 300,
+		height: 50,
+		padding: 20,
+		borderColor: "#f88",
+		borderWidth: 3,
+		borderRadius: 5,
+		backgroundColor: "#88f",
+		boxShadow: "-10px -10px 10px rgba(0, 0, 0, 0.5)",
+		innerShadow: "0px 0px 10px rgba(0, 0, 0, 0.4)",
+		text: {
+			font: "30px Arial",
+			fill: "#fff",
+			align: "left"
+		}
+	});
+	input.x = 50;
+	input.y = 50;
+	app.stage.addChild(input);
+	
+	var text = new PIXI.Input({
+		type: "text",
+		placeholder: "input text",
+		maxlength: 20,
+		width: 200
+	});
+	text.x = 50;
+	text.y = 200;
+	app.stage.addChild(text);
+	
+	var password = new PIXI.Input({
+		type: "password",
+		placeholder: "input password",
+		maxlength: 8,
+		width: 200
+	});
+	password.x = 50;
+	password.y = 250;
+	app.stage.addChild(password);
+	
+	var textarea = new PIXI.Textarea({
+		placeholder: "input multi-line text",
+		width: 200,
+		height: 50
+	});
+	textarea.x = 50;
+	textarea.y = 300;
+	app.stage.addChild(textarea);
+});
+</script>
+</head>
+<body>
+</body>
+</html>
