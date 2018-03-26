@@ -5,7 +5,7 @@ Original Code from https://github.com/SebastianNette/PIXI.Input
 
 Substantial changes have been made to support Chinese/Japanese/Korean IME inputs and mobile devices, by overlaying html input elemnets over canvas. Button & Select support is out of scope and removed. Some styling options are not possible and removed.
 
-DEMO: http://mokgames.com/playground/pixi.dom/
+DEMO: https://apptaro.github.io/PIXI.Input2/test.html
 
 #### How to use ####
 Simply load the pixi.input2.js file after your pixi.js file.
