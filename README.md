@@ -1,9 +1,14 @@
 # PIXI.Input2
-PIXI Input Element with IME Support
-Original Code from https://github.com/SebastianNette/PIXI.Input
+PIXI Input Element with IME Support  
+Original Code from https://github.com/SebastianNette/PIXI.Input  
 (PIXI Input Element v1.0.1, Copyright (c) 2014, Sebastian Nette, http://www.mokgames.com/)
 
-Substantial changes have been made to support Chinese/Japanese/Korean IME inputs and mobile devices, by overlaying html input elemnets over canvas. Button & Select support is out of scope and removed. Some styling options are not possible and removed.
+Substantial changes have been made:
+* When focused, HTML Input/Textarea is displayed on top of canvas, thus:
+  * Supports Chinese/Japanese/Korean IME.
+  * Cleanly supports mobile devices.
+* Button & Select support is out of scope and removed.
+* Some styling options are not possible and removed.
 
 DEMO: https://apptaro.github.io/PIXI.Input2/test.html
 
@@ -71,8 +76,3 @@ var options = {
 };
 var input = new PIXI.Input(options);
 ```
-
-#### Contribution ####
-
-This is still an early stage for our input elements and there are many things to do!
-If you want to contribute to this project, please send a Pull Request. And don't start publishing your own versions of this plugin, or else many different versions might be around, which is just confusing.
