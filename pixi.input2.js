@@ -712,27 +712,27 @@
 			
 			if (this.data.text.align === "right")
 			{
-				this.text.x = (textboxLeft + textboxWidth - padding) | 0;
+				this.text.x = (textboxLeft + textboxWidth - padding) || 0;
 				this.text.anchor.x = 1;
 			}
 			else if (this.data.text.align === "center")
 			{
-				this.text.x = (textboxLeft + textboxWidth / 2) | 0;
+				this.text.x = (textboxLeft + textboxWidth / 2) || 0;
 				this.text.anchor.x = 0.5;
 			}
 			else
 			{ // align=left
-				this.text.x = (textboxLeft + padding) | 0;
+				this.text.x = (textboxLeft + padding) || 0;
 				this.text.anchor.x = 0;
 			}
 			
 			if (this.data.isTextarea)
 			{
-				this.text.y = (textboxTop + padding) | 0;
+				this.text.y = (textboxTop + padding) || 0;
 			}
 			else
 			{
-				this.text.y = (textboxTop + (textboxHeight - this.text.height) / 2) | 0;
+				this.text.y = (textboxTop + (textboxHeight - this.text.height) / 2) || 0;
 			}
 			
 			this.textMask.clear();
