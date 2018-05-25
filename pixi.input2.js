@@ -194,6 +194,19 @@
 		var outerWidth = data.outerWidth = width + padding * 2 + borderWidth * 2 + shadowWidth;
 		var outerHeight = data.outerHeight = height + padding * 2 + borderWidth * 2 + shadowHeight;
 
+		// support for resolution
+		width *= PIXI.settings.RESOLUTION;
+		height *= PIXI.settings.RESOLUTION;
+		padding *= PIXI.settings.RESOLUTION;
+		borderRadius *= PIXI.settings.RESOLUTION;
+		borderWidth *= PIXI.settings.RESOLUTION;
+		textboxTop *= PIXI.settings.RESOLUTION;
+		textboxLeft *= PIXI.settings.RESOLUTION;
+		textboxWidth *= PIXI.settings.RESOLUTION;
+		textboxHeight *= PIXI.settings.RESOLUTION;
+		outerWidth *= PIXI.settings.RESOLUTION;
+		outerHeight *= PIXI.settings.RESOLUTION;
+
 		// set dimensions
 		can.width = outerWidth;
 		can.height = outerHeight;
